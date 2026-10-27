@@ -140,6 +140,12 @@ export interface PagesListPaneData {
 	kind: "pages-list";
 }
 
+export const NEW_TAB_PANE_KIND = "new-tab";
+
+export interface NewTabPaneData {
+	kind: typeof NEW_TAB_PANE_KIND;
+}
+
 /**
  * Pointer to one subagent's transcript. The transcript itself is fetched
  * from the host on every read; only this pointer is persisted.
@@ -195,4 +201,5 @@ export type PaneViewerData =
 	| ChangesListPaneData
 	| ReviewPaneData
 	| PagesListPaneData
+	| NewTabPaneData
 	| SubagentPaneData;
